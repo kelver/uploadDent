@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZPhoto</title>
+
+    <!-- Latest compiled and minified jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified face detect -->
+    <script src="assets/js/jquery.facedetection.js"></script>
+
+    <!-- Latest compiled and minified pixfinder -->
+    <script src="assets/js/pixfinder.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<style>
+    .picture-container {
+        position: relative;
+        height: auto;
+    }
+    .picture {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .face {
+        position: absolute;
+        border: 2px solid #ff1a41;
+    }
+</style>
+
+<body>
+<form action="" id="formPhoto">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-md-offset-3" id="btnSend">
+                <input class="sr-only" type="file" name="imagem" id="imagem" accept="image/*">
+                <button type="button" class="btn btn-primary btn-block" id="img"> Enviar Foto</button>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-md-offset-3" id="boxPhotos" style="">
+                <div class="col-md-6 col-sm-12" id="photoOriginal"></div>
+
+                <div class="col-md-6 col-sm-12 picture-container"></div>
+                <div class="col-md-6 col-sm-12" id="count"></div>
+                <div class="col-md-6 col-sm-12" id="">
+                    <canvas id="canv"></canvas>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-md-offset-3" style="margin-top: 100px;">
+                <button class="btn btn-success btn-block" type="submit">Enviar</button>
+            </div>
+        </div>
+    </div>
+</form>
+    <script src="assets/js/processa.js"></script>
+</body>
+</html>
